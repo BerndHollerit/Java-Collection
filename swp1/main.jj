@@ -1,0 +1,73 @@
+/* main.jj */
+options {
+STATIC = false ;
+}
+PARSER_BEGIN(Main)
+class Main {
+static void main( String[] args )
+throws ParseException, TokenMgrError {
+Main parser = new Main( System.in ) ;
+parser.Start() ; }
+}
+PARSER_END(Main)
+
+SKIP : { " " }
+SKIP : { "\n" | "\r" | "\r\n" }
+
+TOKEN : { < OP : ("plus" | "minus" | "inc" | "dec") > }
+TOKEN : { < ROP : ("isGreater" | "IsEqual") > }
+TOKEN : { < ID : (<SMALL_LETTER>) (<LETTER> | "_")* > }
+TOKEN : { < NUM : (<LEADING_DIGIT>) (<DIGIT>)* > } 
+TOKEN : { < EMPTY : [] > }
+TOKEN : { < OPEN_PAR : "(" > }
+TOKEN : { < CLOSE_PAR : ")" > }
+
+TOKEN : { < #LETTER : ["a"-"z","A"-"Z"] > }
+TOKEN : { < #SMALL_LETTER : ["a"-"z"] > }
+TOKEN : { < #DIGIT : ["0"-"9"] > }
+TOKEN : { < #LEADING_DIGIT : ["1"-"9"] > }
+
+void Start() :
+{}
+{
+  (
+    (E())?
+  )
+<EOF>
+}
+
+void E() :
+{}
+{
+  (
+    Fin() (Op())*
+  )
+}
+
+void Op() :
+{}
+{
+  (
+    Fin() (Op())* (<OP>)
+  )
+}
+
+void Fin() :
+{}
+{
+  (
+    <ID>
+    |
+    <NUM>
+    |
+    <OPEN_PAR> E() <CLOSE_PAR>
+  )
+}
+
+void P() :
+{}
+{
+  (
+    Fin() (P())* (<ROP>)
+  )
+}

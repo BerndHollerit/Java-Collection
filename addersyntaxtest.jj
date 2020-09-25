@@ -1,0 +1,36 @@
+/********************************************* * * A SIMPLE EXAMPLE demonstrating: Java Compiler Complier * * adder.jj Adding up numbers * * Adds numbers, example input: 465 + 100 * * type: javacc adder.jj < input.txt * * to generate the Parser and Lexical Analyser * The parser will be called Adding.java it will instantiate SimpleCharStream * to deliver characters to the lexcial analyser (AdderTokenManager) * * The lexical analyser verifies valid tokens, the parser varifies the * sensibility of the order of the tokens according to the grammar * **********************************************/ 
+
+options {
+STATIC=false;
+}
+PARSER_BEGIN(Adder)
+class Adder { /* CODE WILL BE AUTO GENERATED AND PLACED IN THIS CLASS */ 
+tatic void main(String[] args)
+throws ParseException, TokenMgrError, NumberFormatException {
+Adder parser = new Adder(System.in)
+int val = parser.Start();
+System.out.println(val);
+}
+}
+PARSER_END(Adder) /****** Specify the Lexical Analyzer *******/ /****** will be called AdderTokenManager.java *******/
+SKIP: {" "}
+SKIP: {"\n" | "\r" | "\r\n" } /* give symbolic names for used tokens: */
+TOKEN: { }
+TOKEN: { } /****** Specify the Parser (a BNF production) *******/ /****** will be called Adder.java *******/
+//First BNF Production:
+int Start() throws NumberFormatException: {
+//Declared variables: Token t; int i; int value;
+}
+{ //just for recognizing: ()* 
+//with adding: t = 
+{i = Integer.parseInt(t.image)
+}
+//image stores the matched strings {value = i;
+}
+(  t =  {i = Integer.parseInt(t.image);
+}
+{value += i;} )* 
+{return value;
+}
+}
+/* OR...........FACTOR OUT THE t=\n {i = Integer.parseInt(t.image);} int Start(): { int i; int value; } { value = Primary() (  i = Primary() {value += i;} )*  {return value;} } int Primary() throws NumberFormatException: { Token i; } { t =  {return Integer.parseInt(t.image);} } */

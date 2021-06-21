@@ -9,10 +9,10 @@ public class IsNotANumber {
 	static double[] array = { Double.NaN, 0.0, 42, Double.POSITIVE_INFINITY, Double.NEGATIVE_INFINITY };
 
 	public static void main(String[] args) {
-		isItANumberArray(array);
+		isItANumber(array);
 	}
 
-	public static void isItANumberArray(double[] x) {
+	public static void isItANumber(double[] x) {
 		for (int i = 0; i < x.length; i++) {
 
 			if (x[i] == Double.NaN) {

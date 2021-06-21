@@ -5,10 +5,23 @@
  */
 public class IsNotANumber
 {
+   static double x = Double.NaN;
+   static double y = 0.0;
+   static double z = 42;
+   static double a = Double.POSITIVE_INFINITY;
+   static double b = Double.NEGATIVE_INFINITY;
+   
    public static void main(String[] args)
    {
-		double x = Double.NaN;
-		
+		isItANumber(x);
+		isItANumber(y);
+		isItANumber(z);
+		isItANumber(a);
+		isItANumber(b);
+   }
+   
+   public static void isItANumber(double x)
+   {
 		if (x == Double.NaN)
 		{
 			System.out.println("We cannot reach this");
@@ -20,11 +33,11 @@ public class IsNotANumber
 		
 		if (Double.isNaN(x))
 		{
-			System.out.println("x is not a number");
+			System.out.println("Is not a number");
 		}
 		else
 		{
-			System.out.print("x is ");
+			System.out.print("The number is ");
 			System.out.println(x);
 		}
    }

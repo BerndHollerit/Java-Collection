@@ -1,7 +1,7 @@
 /**
- * This is the first sample program in Core Java Chapter 3
- * @version 1.01 1997-03-22
- * @author Gary Cornell
+ * Exercise of Core Java Chapter 3, page 45
+ * @version 1.00 2021-06-21
+ * @author Bernd Hollerit
  */
 public class IsNotANumber
 {

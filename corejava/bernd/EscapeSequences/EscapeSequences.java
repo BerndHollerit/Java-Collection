@@ -1,5 +1,5 @@
 /**
- * Exercise of Core Java Chapter 3, page 45
+ * Exercise of Core Java Chapter 3, page 46
  * 
  * @version 1.00 2021-06-21
  * @author Bernd Hollerit

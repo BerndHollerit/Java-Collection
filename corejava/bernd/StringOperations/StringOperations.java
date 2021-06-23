@@ -45,6 +45,9 @@ public class StringOperations {
 
 		if (s.startsWith(substring))
 			System.out.println(s + " starts with substring " + substring);
+		
+		if (s.endsWith("lo"))
+			System.out.println(s + " ends with substring " + "lo");
 
 		if (s != null && s.length() != 0)
 			System.out.println("String is not null and its length is not 0. String: " + s);

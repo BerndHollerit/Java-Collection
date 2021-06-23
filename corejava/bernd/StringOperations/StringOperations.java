@@ -45,12 +45,16 @@ public class StringOperations {
 
 		if (s.startsWith(substring))
 			System.out.println(s + " starts with substring " + substring);
-		
+
 		if (s.endsWith("lo"))
 			System.out.println(s + " ends with substring " + "lo");
 
-		if (s != null && s.length() != 0)
+		if (s != null && s.length() != 0) {
 			System.out.println("String is not null and its length is " + s.length() + ". String: " + s);
+			System.out.println("UPPERCASE: " + s.toUpperCase());
+			System.out.println("lowercase: " + s.toLowerCase());
+			System.out.println("Say it three times: " + s.repeat(3));
+		}
 
 	}
 

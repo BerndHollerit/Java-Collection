@@ -22,10 +22,9 @@ public class IsNotANumber {
 			}
 
 			if (Double.isNaN(x[i])) {
-				System.out.println("Is not a number");
+				System.out.println(x[i] + " is not a number");
 			} else {
-				System.out.print("The number is ");
-				System.out.println(x[i]);
+				System.out.println("The number is " + x[i]);
 			}
 		}
 	}

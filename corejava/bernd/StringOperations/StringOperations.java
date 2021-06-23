@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 /**
- * Exercise of Core Java Chapter 3, page 62-68
+ * Exercise of Core Java Chapter 3, page 62-76
  * 
  * @version 1.00 2021-06-23
  * @author Bernd Hollerit

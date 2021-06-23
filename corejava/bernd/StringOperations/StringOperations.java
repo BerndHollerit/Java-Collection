@@ -19,15 +19,26 @@ public class StringOperations {
 		}
 
 		String empty = "";
+		stringContent(null);
+		stringContent(empty);
+		stringContent(greeting);
 
-		if (empty.length() == 0)
+	}
+
+	public static void stringContent(String s) {
+		if (s == null) {
+			System.out.println("String is null");
+			return;
+		}
+
+		if (s.length() == 0)
 			System.out.println("Length of String is 0");
 
-		if (empty.equals(""))
+		if (s.equals(""))
 			System.out.println("String equals \"\"");
 
-		if (empty != null && empty.length() != 0)
-			System.out.println("String is not null and its length is not 0. String: " + empty);
+		if (s != null && s.length() != 0)
+			System.out.println("String is not null and its length is not 0. String: " + s);
 
 	}
 

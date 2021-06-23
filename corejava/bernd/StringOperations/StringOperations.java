@@ -36,6 +36,12 @@ public class StringOperations {
 
 		if (s.equals(""))
 			System.out.println("String equals \"\"");
+		
+		if (s.isEmpty())
+			System.out.println("String is empty");
+		
+		if (s.isBlank())
+			System.out.println("String is blank");
 
 		if (s != null && s.length() != 0)
 			System.out.println("String is not null and its length is not 0. String: " + s);

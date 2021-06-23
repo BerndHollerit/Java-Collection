@@ -50,7 +50,7 @@ public class StringOperations {
 			System.out.println(s + " ends with substring " + "lo");
 
 		if (s != null && s.length() != 0)
-			System.out.println("String is not null and its length is not 0. String: " + s);
+			System.out.println("String is not null and its length is " + s.length() + ". String: " + s);
 
 	}
 

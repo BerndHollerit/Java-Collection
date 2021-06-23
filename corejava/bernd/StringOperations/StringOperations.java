@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 /**
  * Exercise of Core Java Chapter 3, page 62-68
  * 
@@ -18,10 +20,15 @@ public class StringOperations {
 			System.out.println("Equals");
 		}
 
+		Scanner in = new Scanner(System.in);
+		System.out.println("Please enter a String: ");
+		String enteredString = in.next();
+		
 		String empty = "";
 		stringContent(null);
 		stringContent(empty);
 		stringContent(greeting);
+		stringContent(enteredString);
 
 	}
 

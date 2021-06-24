@@ -41,6 +41,11 @@ public class InputOutput {
 		
 		Scanner fileInput = new Scanner(Path.of("myfile.txt"), StandardCharsets.UTF_8);
 		PrintWriter fileOutput = new PrintWriter("myfile2.txt", StandardCharsets.UTF_8);
+		
+		// Easiest way to print all elements of array
+		int[] smallPrimes = { 2, 3, 5, 7, 11, 13 };
+		System.out.println(Arrays.toString(smallPrimes)); // prints: [2, 3, 5, 7, 11, 13] (including brackets and commas)
+
 
 	}
 

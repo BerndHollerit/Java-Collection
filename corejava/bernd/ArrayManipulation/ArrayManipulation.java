@@ -5,7 +5,7 @@
  * @version 1.00 2021-06-24
  * @author Bernd Hollerit
  */
-public class Arrays {
+public class ArrayManipulation {
 
 	public static void main(String[] args) {
 

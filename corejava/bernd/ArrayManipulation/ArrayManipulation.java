@@ -1,4 +1,4 @@
-
+import java.util.*;
 /**
  * Exercise of Core Java Chapter 3, page 108ff
  * 
@@ -19,6 +19,7 @@ public class ArrayManipulation {
 		
 		int[] smallPrimes = { 2, 3, 5, 7, 11, 13 };
 		printIntArray(smallPrimes);
+		System.out.println(Arrays.toString(smallPrimes)); // prints: [2, 3, 5, 7, 11, 13] (including brackets and commas)
 		
 		String[] authors = {
 				"James Gosling",

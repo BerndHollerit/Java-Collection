@@ -1,5 +1,8 @@
-import java.util.Scanner;
-import java.util.Date;
+import java.nio.file.Path;
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
+import java.util.*;
+import java.io.*;
 
 /**
  * Exercise of Core Java Chapter 3, page 75ff
@@ -9,7 +12,7 @@ import java.util.Date;
  */
 public class InputOutput {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 
 		Scanner in = new Scanner(System.in);
 
@@ -33,6 +36,11 @@ public class InputOutput {
 		System.out.printf("%1$s %2$tB %2$te, %2$tY\n", "Due Date:", new Date());
 		System.out.printf("%s %tB %<te, %<tY\n", "Due Date:", new Date());
 		System.out.printf("%1$s %2$tF %2$tT\n", "International format:", new Date());
+		
+		// File Input and Output
+		
+		Scanner fileInput = new Scanner(Path.of("myfile.txt"), StandardCharsets.UTF_8);
+		PrintWriter fileOutput = new PrintWriter("myfile2.txt", StandardCharsets.UTF_8);
 
 	}
 

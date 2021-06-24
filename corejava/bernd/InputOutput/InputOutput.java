@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Date;
 
 /**
  * Exercise of Core Java Chapter 3, page 75ff
@@ -27,6 +28,11 @@ public class InputOutput {
 		System.out.println("Unformatted double: " + x);
 		System.out.printf("Formatted double: %8.2f\n", x);
 		System.out.printf("Formatted double with group separator: %,.2f\n", x);
+		
+		System.out.printf("%tc\n", new Date());
+		System.out.printf("%1$s %2$tB %2$te, %2$tY\n", "Due Date:", new Date());
+		System.out.printf("%s %tB %<te, %<tY\n", "Due Date:", new Date());
+		System.out.printf("%1$s %2$tF %2$tT\n", "International format:", new Date());
 
 	}
 

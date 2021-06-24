@@ -7,7 +7,7 @@ import java.util.*;
  */
 // Call this program with parameters, e.g.:
 // java Message -g cruel world
-public class Message
+public class CommandLineParameters
 {
 	public static void main(String[] args)
 	{

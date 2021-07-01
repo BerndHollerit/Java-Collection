@@ -1,7 +1,7 @@
 import java.time.LocalDate;
 
 /**
- * Exercise of Core Java Chapter 3, page 112f
+ * Exercise of Core Java Chapter 4, page 136f
  * 
  * @version 1.00 2021-07-01
  * @author Bernd Hollerit

@@ -13,6 +13,7 @@ public class DateArithmetic
 	{
 		LocalDate birthDay = LocalDate.of(1985, 2, 18);
 		
+		System.out.println(birthDay.plusDays(13337));
 		System.out.println(birthDay.plusDays(10000));
 	}
 }

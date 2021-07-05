@@ -32,8 +32,8 @@ class StaticField
 	
 	public StaticField(String n)
 	{
-		name = n;
-		id = numberOfClassInstances;
+		this.name = n;
+		this.id = numberOfClassInstances;
 		numberOfClassInstances++;
 	}
 	

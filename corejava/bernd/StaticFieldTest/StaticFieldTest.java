@@ -17,7 +17,7 @@ public class StaticFieldTest
 		staticFieldArray[2] = new StaticField("Threed Feed'n'Seed");
 		
 		for (StaticField element : staticFieldArray)
-			System.out.println("Name: " + element.getName() + " ID: " + element.getId() + " Number of Class Instances: " + element.getNumberOfClassInstances());
+			System.out.println("Name: " + element.getName() + " ID: " + element.getId() + " Number of Class Instances: " + StaticField.getNumberOfClassInstances());
 
 	}
 	
@@ -47,7 +47,7 @@ class StaticField
 		return id;
 	}
 	
-	public int getNumberOfClassInstances()
+	public static int getNumberOfClassInstances()
 	{
 		return numberOfClassInstances;
 	}

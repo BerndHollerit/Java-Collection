@@ -54,9 +54,8 @@ class Employee
 
    public Employee(double s)
    {
-      // Sets the values directly
-      name = "Employee number " + nextId;
-      salary = s;
+      // calls the Employee(String, double) constructor
+      this("Employee #" + nextId, s);
    }
 
    // the default constructor
